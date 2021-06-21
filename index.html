@@ -36,12 +36,15 @@ body{
     var datediffTime = today - dob;
     
     //To calculate the no. of days between two dates
-    var AgeYear = Math.round(datediffTime / (1000 * 3600 * 24 * 365));
+    var AgeYear = Math.floor(datediffTime / (1000 * 3600 * 24 * 365));
+    var AgeMonth = Math.floor(((datediffTime / (1000 * 3600 * 24 * 365)) - AgeYear) * 12)
+
     
     var greet;
-    greet = 'Your Current Age is  ' + AgeYear;
+    greet = 'Your Current Age is  ' + AgeYear + ' years ' + AgeMonth + ' months';
     
     document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${AgeYear}</div>`;
+        greet;
+        //greet+=`<div id="date"> It's ${AgeYear}</div>`;
 </script> 
 </html>

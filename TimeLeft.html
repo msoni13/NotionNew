@@ -1,6 +1,6 @@
 <html> 
 <head>
-    <title>Current Age</title> 
+    <title>Percentage of Life Left till Age 60</title> 
     <style>
 #lbl {
     font-family: monospace;
@@ -43,7 +43,7 @@ body{
     var Age;
     //Age = 'Current Age:' + AgeYear + ' years ' + AgeMonth + ' months';
     //Age = AgeYear + ' years ' + AgeMonth + ' months';
-    var Age = math.round((((60 - (datediffTime / (1000 * 3600 * 24 * 365)))/60)*100));
+    var Age = ((((60 - (datediffTime / (1000 * 3600 * 24 * 365)))/60)*100));
     
     var AgeLabel = "Current Age:"
     document.getElementById('lbl').innerHTML =

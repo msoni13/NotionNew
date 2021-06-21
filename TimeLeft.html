@@ -4,8 +4,8 @@
     <style>
 #lbl {
     font-family: monospace;
-    font-size: xx-large;
-    color: #E00000;
+    font-size: large;
+    color: #626262;
     padding: 5px;
     border: 1px solid #ececec;
     text-align: center;
@@ -37,7 +37,7 @@ body{
     
     var PercentLeft  = Math.round((((60 - (datediffTime / (1000 * 3600 * 24 * 365)))/60)*100));
     
-    var PercentLabel = "Percentage of Life Left till Age 60:"
+    var PercentLabel = "Life Remaining till Age 60:"
     document.getElementById('lbl').innerHTML =
         PercentLabel+=`<div id="date"> ${PercentLeft} %</div>`;
         //'Current Ageee: ' + \n  + Age;

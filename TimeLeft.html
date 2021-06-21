@@ -1,6 +1,6 @@
 <html> 
 <head>
-    <title>1Percentage of Life Left till Age 60</title> 
+    <title>Percentage of Life Left till Age 60</title> 
     <style>
 #lbl {
     font-family: monospace;
@@ -35,19 +35,11 @@ body{
     var dob = new Date("03/13/1987");
     var datediffTime = today - dob;
     
-    //To calculate the no. of days between two dates
-    var AgeYear = Math.floor(datediffTime / (1000 * 3600 * 24 * 365));
-    var AgeMonth = Math.floor(((datediffTime / (1000 * 3600 * 24 * 365)) - AgeYear) * 12)
-
+    var PercentLeft  = Math.round((((60 - (datediffTime / (1000 * 3600 * 24 * 365)))/60)*100));
     
-    var Age;
-    //Age = 'Current Age:' + AgeYear + ' years ' + AgeMonth + ' months';
-    //Age = AgeYear + ' years ' + AgeMonth + ' months';
-    var Age = Math.round((((60 - (datediffTime / (1000 * 3600 * 24 * 365)))/60)*100));
-    
-    var AgeLabel = "Current Age:"
+    var PercentLabel = "Percentage of Life Left till Age 60:"
     document.getElementById('lbl').innerHTML =
-        AgeLabel+=`<div id="date"> ${Age}</div>`;
+        PercentLabel+=`<div id="date"> ${PercentLeft}</div>`;
         //'Current Ageee: ' + \n  + Age;
         //greet+=`<div id="date"> It's ${AgeYear}</div>`;
         //'Current Age:' + =`<div id="date"> ${Age}</div>`;

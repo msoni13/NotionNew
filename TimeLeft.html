@@ -42,7 +42,8 @@ body{
     
     var Age;
     //Age = 'Current Age:' + AgeYear + ' years ' + AgeMonth + ' months';
-    Age = AgeYear + ' years ' + AgeMonth + ' months';
+    //Age = AgeYear + ' years ' + AgeMonth + ' months';
+    var Age = math.floor((60 - (datediffTime / (1000 * 3600 * 24 * 365)))/60);
     
     var AgeLabel = "Current Age:"
     document.getElementById('lbl').innerHTML =

@@ -40,11 +40,14 @@ body{
     var AgeMonth = Math.floor(((datediffTime / (1000 * 3600 * 24 * 365)) - AgeYear) * 12)
 
     
-    var greet;
-    greet = 'Current Age:' <br> + AgeYear + ' years ' + AgeMonth + ' months';
+    var Age;
+    //Age = 'Current Age:' + AgeYear + ' years ' + AgeMonth + ' months';
+    Age = AgeYear + ' years ' + AgeMonth + ' months';
     
     document.getElementById('lbl').innerHTML =
-        greet;
+        //greet;
         //greet+=`<div id="date"> It's ${AgeYear}</div>`;
+        'Current Age:' + =`<div id="date"> ${Age}</div>`;
+
 </script> 
 </html>

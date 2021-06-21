@@ -33,17 +33,15 @@ body{
     var date = today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
 
     var dob = new Date("03/13/1987");
-    var datediff = today - dob;
-    // To calculate the time difference of two dates
-    //var Difference_In_Time = date2.getTime() - date1.getTime();
- 
-    // To calculate the no. of days between two dates
-    //var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    var datediffTime = today - dob;
+    
+    //To calculate the no. of days between two dates
+    var AgeYear = Math.round(datediffTime / (1000 * 3600 * 24 * 365));
     
     var greet;
-    greet = 'Your Current Age is  ' + datediff;
+    greet = 'Your Current Age is  ' + AgeYear;
     
     document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${datediff}</div>`;
+        greet+=`<div id="date"> It's ${AgeYear}</div>`;
 </script> 
 </html>

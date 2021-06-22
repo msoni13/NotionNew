@@ -36,7 +36,7 @@ body{
     var dob = new Date("03/13/1987");
     var datediffTime = today - dob;
     
-    var PercentLeft  = Math.round((((60 - (datediffTime / (1000 * 3600 * 24 * 365)))/60)*100));
+    var PercentLeft  = Math.round((((60 - (datediffTime / (1000 * 3600 * 24 * 365)))/60)*1000))/10;
     
     var PercentLabel = "Life Remaining till Age 60:"
     document.getElementById('lbl').innerHTML =
